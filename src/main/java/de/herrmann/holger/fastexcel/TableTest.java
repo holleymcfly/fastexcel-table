@@ -17,7 +17,7 @@ public class TableTest {
     private Worksheet worksheet;
 
     /**
-     * Create two files <pre>OUTPUT_FILE_WORKING</pre> and <pre>OUTPUT_FILE_CORRUPT</pre>.
+     * Create two files <pre>OUTPUT_FILE_WORKING</pre> and <pre>OUTPUT_FILE_CORRUPT.</pre>
      * The first one will have a formatted table with everything working as expected.
      * The second one will have an ampersand in one of the headers, which leads to an error message when opening the excel file.
      * Both will have an ampersand in its data table, which seems to be no problem.
@@ -56,7 +56,7 @@ public class TableTest {
         return row;
     }
 
-    private void createWorkbook(FileOutputStream fos) throws IOException {
+    private void createWorkbook(FileOutputStream fos) {
 
         workbook = new Workbook(fos, "FastExcel-Table", "1.0");
         worksheet = workbook.newWorksheet("FastExcel-Table");
